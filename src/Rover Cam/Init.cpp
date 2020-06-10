@@ -1,4 +1,4 @@
-#include"Init.h"
+it #include"Init.h"
 
 void Init::Init_YUV422(){
   WriteOV7670(0x12, 0x00);//COM7
