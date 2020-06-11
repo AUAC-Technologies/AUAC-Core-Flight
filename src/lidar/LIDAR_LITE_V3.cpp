@@ -1,9 +1,9 @@
-#include"LIDAR_INIT.h"
+#include"LIDAR_LITE_V3.h"
 
 uint8_t ServoPos;
 
 //Constructor
-INIT_LIDAR::INIT_LIDAR(){
+LIDAR_LITE::LIDAR_LITE(){
     control.attach(5);
     // LIDAR control
     Wire.begin(); // join i2c bus
@@ -11,7 +11,7 @@ INIT_LIDAR::INIT_LIDAR(){
 }
 
 // Get a measurement from the LIDAR Lite
-uint8_t INIT_LIDAR::lidarGetRange() {
+uint8_t LIDAR_LITE::lidarGetRange() {
     int val = -1;
     Wire.beginTransmission((int)LIDARLite_ADDRESS); // transmit to LIDAR-Lite
     Wire.write((int)RegisterMeasure); // sets register pointer to (0x00)
@@ -32,13 +32,13 @@ uint8_t INIT_LIDAR::lidarGetRange() {
 }
 
 //Function to increment servo position in a cycle from (-90 to 180)
-int INIT_LIDAR::incrementServoRotation(int x){
+int LIDAR_LITE::incrementServoRotation(int x){
     int pos = (x == 180) ? pos = -90 : x += 1;
     return pos;
 }
 
 //Function returns lidar range value with servo angular rotation (-90 to 180)
-uint8_t *INIT_LIDAR::GET_L_VALUE(){
+uint8_t *LIDAR_LITE::GET_L_VALUE(){
     uint8_t DLEAY_TIME;
     //Move servo by 1 degree
     control.write(ServoPos);
@@ -51,3 +51,5 @@ uint8_t *INIT_LIDAR::GET_L_VALUE(){
     stats[1] = (ServoPos - 1);
     return stats;
 }
+
+ 
