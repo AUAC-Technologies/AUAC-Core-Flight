@@ -1,4 +1,4 @@
-#include"RP_Lidar_A1M8.h"
+/*#include"RP_Lidar_A1M8.h"
 
 RPLidar lidar;
 
@@ -34,4 +34,4 @@ uint8_t RP_LIDAR::RP_RETURN(){
        delay(1000);
     }
   }
-}
+}*/
