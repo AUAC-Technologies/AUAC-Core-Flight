@@ -17,12 +17,12 @@ class LIDAR_LITE {
         LIDAR_LITE();
     private:
 
-        uint8_t lidarGetRange();
+        double lidarGetRange();
 
         int incrementServoRotation(int x);
 
     public:
-        uint8_t *GET_L_VALUE();
+        double *GET_L_VALUE();
 
 
 };

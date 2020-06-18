@@ -11,7 +11,7 @@ LIDAR_LITE::LIDAR_LITE(){
 }
 
 // Get a measurement from the LIDAR Lite
-uint8_t LIDAR_LITE::lidarGetRange() {
+double LIDAR_LITE::lidarGetRange() {
     int val = -1;
     Wire.beginTransmission((int)LIDARLite_ADDRESS); // transmit to LIDAR-Lite
     Wire.write((int)RegisterMeasure); // sets register pointer to (0x00)
@@ -38,14 +38,14 @@ int LIDAR_LITE::incrementServoRotation(int x){
 }
 
 //Function returns lidar range value with servo angular rotation (-90 to 180)
-uint8_t *LIDAR_LITE::GET_L_VALUE(){
+double *LIDAR_LITE::GET_L_VALUE(){
     uint8_t DLEAY_TIME;
     //Move servo by 1 degree
     control.write(ServoPos);
     delay(DLEAY_TIME);
     incrementServoRotation(ServoPos);
     //Init return array
-    uint8_t *stats = (uint8_t*)malloc(2);
+    double *stats = (double*)malloc(2);
     //Get Lidar
     stats[0] = lidarGetRange();
     stats[1] = (ServoPos - 1);
