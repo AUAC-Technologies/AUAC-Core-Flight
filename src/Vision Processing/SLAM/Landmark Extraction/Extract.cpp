@@ -4,14 +4,14 @@ double EXTRACTION::SAR_to_angle(double SAR){
 
 }
 
-double *EXTRACTION::dataPush(){
+/*double *EXTRACTION::dataPush(){
     LIDAR_LITE push;
     double *LIDAR_DATA = (double*)malloc(2);
     double *recv = push.GET_L_VALUE();
     LIDAR_DATA[0] = recv[0];
     LIDAR_DATA[1] = recv[1];
     return LIDAR_DATA;
-}
+}*/
 
 double *EXTRACTION::updateMap(double **map){
     double *data = dataPush();
