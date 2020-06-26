@@ -15,20 +15,23 @@
 //Using this our primary control means we can adjust the direction of yaw movement
 
 class PropThrustControl {
-    public:
-        PropThrustControl(){
-            pinMode(BPIN1,OUTPUT);
-            pinMode(BPIN2,OUTPUT);
-            pinMode(BPIN3,OUTPUT);
-            pinMode(BPIN4,OUTPUT);
-        }
-    public:
+    private:
+        uint8_t thrustWriteFL(uint8_t PWM);
 
-        void PWM_init(uint8_t Motor,uint8_t vel);
+        uint8_t thrustWriteFR(uint8_t PWM);
+
+        uint8_t thrustWriteBL(uint8_t PWM);
+
+        uint8_t thrustWriteBR(uint8_t PWM);
+
+
+    public:
+        PropThrustControl();
+
+        uint8_t PWM_init(uint8_t M1_VEL,uint8_t M2_VEL);
 
         //Translates 0 - 9 motor PWM values to 0,175 - 255
         uint8_t translate(uint8_t x);
 
-        void thrustWrite(uint8_t Motor,uint8_t speed);
 
 };

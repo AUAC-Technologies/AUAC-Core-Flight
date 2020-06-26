@@ -1,24 +1,47 @@
 #include"PropThrustControl.h"
 
-void PropThrustControl::PWM_init(uint8_t Motor,uint8_t vel) {
- 	uint8_t newvel = translate(vel);
-	thrustWrite(Motor,newvel);
+PropThrustControl::PropThrustControl(){
+	pinMode(BPIN1,OUTPUT);
+    pinMode(BPIN2,OUTPUT);
+    pinMode(BPIN3,OUTPUT);
+    pinMode(BPIN4,OUTPUT);
+}
+			
+uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,uint8_t M_VEL) {
+ 	switch(MOTOR){
+		case 1:
+			thrustWriteFL(M_VEL);
+			break;
+		case 2:
+			thrustWriteFR(M_VEL);
+			break;
+		case 3:
+			thrustWriteBL(M_VEL);
+			break;
+		case 4:
+			thrustWriteBR(M_VEL);
+			break;		
+	 }
+	return;
 }	 
 
-uint8_t translate(uint8_t x){
-	if(x == 0){
-		return 0;
-	}else{
-		uint8_t *vals = (uint8_t *)malloc(8);
-		vals[0] = 0;
-		for(size_t i = 175;i < 255;i+=15){
-			vals[i] = i;
-		}
-		return vals[x];
-	}
+
+uint8_t thrustWriteFL(uint8_t PWM){
+	analogWrite(BPIN1,PWM);
+	return;
 }
 
-void thrustWrite(uint8_t Motor,uint8_t speed){
-	analogWrite(Motor, speed); 
-	delay(10);
+uint8_t thrustWriteFR(uint8_t PWM){
+	analogWrite(BPIN1,PWM);
+	return;
+}
+
+uint8_t thrustWriteBL(uint8_t PWM){
+	analogWrite(BPIN1,PWM);
+	return;
+}
+
+uint8_t thrustWriteBR(uint8_t PWM){
+	analogWrite(BPIN1,PWM);
+	return;
 }

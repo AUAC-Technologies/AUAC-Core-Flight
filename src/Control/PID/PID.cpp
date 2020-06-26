@@ -65,7 +65,7 @@ void PROPORTIONAL_INTEGRAL_DERIVATIVE::updateConstants(String Process){
             index = i;
         }
     }
-    ErrorDump sen;
+    //ErrorDump sen;
     if(index != -1){
         kp = PID_PR[index][0];
         ki = PID_PR[index][1];
