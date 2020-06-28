@@ -30,5 +30,6 @@ Across all releases there would be iterative UAV body design to allow for higher
 * Implementation of liDAR or camera for object detection and tracking
 
 #### Future releases
+* Mobile app to use as remote
 * System for recognizing No-Fly-Zones
 * Gesture Recognition
