@@ -7,6 +7,8 @@ This UAV system is designed to be a dynamic personal storage system which can ac
 
 Across all releases there would be iterative UAV body design to allow for higher load capacity.
 
+![alt text](https://github.com/nyameaama/Autonomous-UAV/blob/master/CAD%20models/Body%20Prototype/Screen%20Shot%202020-06-28%20at%206.02.01%20PM.png)
+
 #### Release 1.0
 * UAV design with load capacity of ..
 * ATMEGA 2560 based microcontroller running on an arduino development board for UAV computer
