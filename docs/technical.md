@@ -13,10 +13,10 @@
 
 #### Approx Thrust 
 Thrust(F) = density(p) * propArea(A) ^2 / 2
-F(uav) = ()
+- F(uav) = ()
 
 UAV Weight = 9.8 * totalMass
-W(uav) = ()
+- W(uav) = ()
 
 Resultant t = (Thrust - UAV Weight)
 

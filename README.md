@@ -10,7 +10,7 @@ Across all releases there would be iterative UAV body design to allow for higher
 ![alt text](https://github.com/nyameaama/Autonomous-UAV/blob/master/CAD%20models/Body%20Prototype/Screen%20Shot%202020-06-28%20at%206.02.01%20PM.png)
 
 #### Release 1.0
-* UAV design with load capacity of ...[(Technicalities)]()
+* UAV design with load capacity of ...[(Technicalities)](https://github.com/nyameaama/Autonomous-UAV/blob/master/docs/technical.md)
 * ATMEGA 2560 based microcontroller running on an arduino development board for UAV computer
 * ATMEGA 328p based microcontroller running on UAV remote
 * HC-SRO5 bluetooth modules x2
