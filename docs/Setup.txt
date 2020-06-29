@@ -6,5 +6,8 @@ High Speed 360 continuous servo
 
 
 Routines:
-- weightDifferential detection
+High level Load routines
+- weightDifferential detection -> To determine if load(item) has been placed on drone
+- AreaPlaced - > Determine the area on the drone item was placed
+- ApproxMassPlaced - > Find the mass of object placed on vehicle so thrust can be adjusted to maintain level position
 - 
