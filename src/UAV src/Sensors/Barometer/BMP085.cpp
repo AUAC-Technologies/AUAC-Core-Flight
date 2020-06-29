@@ -1,15 +1,15 @@
 #include"BMP085.h"
 
 double Pressure::getTemperature(){
-    return Psensor.readTemperature();
+    return Psensor -> readTemperature();
 }
 
 double Pressure::getSLPressure(){
-    return Psensor.readSealevelPressure();
+    return Psensor -> readSealevelPressure();
 }
 
 double Pressure::getPressure(){
-    return Psensor.readPressure();
+    return Psensor -> readPressure();
 }
 
 double Pressure::getAltitude(){

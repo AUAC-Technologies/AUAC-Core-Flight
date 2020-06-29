@@ -2,3 +2,9 @@ Electronics Bay Setup
 
 Lidar 
 High Speed 360 continuous servo
+
+
+
+Routines:
+- weightDifferential detection
+- 

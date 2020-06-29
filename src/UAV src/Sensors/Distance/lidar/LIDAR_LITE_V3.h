@@ -13,6 +13,7 @@
 class LIDAR_LITE {
     private:
         Servo control;
+        
     public:
         LIDAR_LITE();
     private:

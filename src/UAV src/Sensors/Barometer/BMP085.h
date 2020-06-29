@@ -5,8 +5,9 @@
 
 class Pressure {
     private:
-        Adafruit_BMP085 Psensor;
-
+        Adafruit_BMP085 Obj;
+        Adafruit_BMP085 *Psensor = &Obj;
+        
     public:
         double getTemperature();
 

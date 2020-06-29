@@ -4,7 +4,8 @@ uint8_t ServoPos;
 
 //Constructor
 LIDAR_LITE::LIDAR_LITE(){
-    control.attach(5);
+    Servo *pointer = &control;
+    pointer -> attach(5);
     // LIDAR control
     Wire.begin(); // join i2c bus
     
