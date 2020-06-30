@@ -1,0 +1,17 @@
+#include"weightDifferential.h"
+
+ boolean WEIGHT_DIFF::STILL_WEIGHT_DIFFERENTIAL_DETECT(){
+
+ }
+
+ boolean WEIGHT_DIFF::DYNAMIC_WEIGHT_DIFFERENTIAL_DETECT(){
+
+ }
+
+uint8_t WEIGHT_DIFF::AREA_PLACED(){
+
+}
+
+uint8_t WEIGHT_DIFF::APPROX_MASS_PLACED(){
+
+}

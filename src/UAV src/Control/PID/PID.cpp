@@ -5,7 +5,7 @@ double PID_PR[64][5];
 String *tags = (String*)malloc(12);
 
 //Important for PID process identification
-double kp = 0.5,ki = 0.2,kd = 0.1;
+double kp = 0,ki = 0,kd = 0;
 double error_previous = 0,error_integral = 0;
 
 double error,processVar;

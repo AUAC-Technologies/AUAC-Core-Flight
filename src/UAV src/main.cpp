@@ -1,10 +1,16 @@
-#include <Arduino.h>
+#include"main/EventQueue.h"
+#include<Arduino.h>
+
+EVENT_QUEUE *initialize = new EVENT_QUEUE;
 
 void setup() {
-  // put your setup code here, to run once:
-  double jl;
+  
+  //initialize -> UAV_SETUP();
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+
+
 }
