@@ -32,16 +32,16 @@ uint8_t thrustWriteFL(uint8_t PWM){
 }
 
 uint8_t thrustWriteFR(uint8_t PWM){
-	analogWrite(BPIN1,PWM);    //ANTI-CLOCKWISE
+	analogWrite(BPIN2,PWM);    //ANTI-CLOCKWISE
 	return;
 }
 
 uint8_t thrustWriteBL(uint8_t PWM){
-	analogWrite(BPIN1,PWM);    //ANTICLOCKWISE
+	analogWrite(BPIN3,PWM);    //ANTICLOCKWISE
 	return;
 }
 
 uint8_t thrustWriteBR(uint8_t PWM){
-	analogWrite(BPIN1,PWM);    //CLOCKWISE
+	analogWrite(BPIN4,PWM);    //CLOCKWISE
 	return;
 }

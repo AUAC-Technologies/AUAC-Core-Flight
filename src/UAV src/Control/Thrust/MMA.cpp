@@ -4,9 +4,9 @@ uint8_t MOTOR_MIXING::THRUST_RANGE_FIX(){
 
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_ROLL(uint8_t roll){
+uint8_t MOTOR_MIXING::MOTOR_MIX_ROLL(double roll){
     PropThrustControl *ADJUST = new PropThrustControl;
-    uint8_t thrust;
+    signed int thrust;
     if(roll < 0){
         ADJUST -> PWM_init(1,thrust + roll);
         ADJUST -> PWM_init(2,thrust - roll); 
@@ -22,9 +22,9 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_ROLL(uint8_t roll){
     return;
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_YAW(uint8_t yaw){
+uint8_t MOTOR_MIXING::MOTOR_MIX_YAW(double yaw){
     PropThrustControl *MOD = new PropThrustControl;
-    uint8_t thrust;
+    signed int thrust;
     if(yaw < 0){
         MOD -> PWM_init(1,thrust - yaw);
         MOD -> PWM_init(2,thrust + yaw); 
@@ -40,9 +40,9 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_YAW(uint8_t yaw){
     return;
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_PITCH(uint8_t pitch){
-     PropThrustControl *ALTER = new PropThrustControl;
-    uint8_t thrust;
+uint8_t MOTOR_MIXING::MOTOR_MIX_PITCH(double pitch){
+    PropThrustControl *ALTER = new PropThrustControl;
+    signed int thrust;
     if(pitch < 0){
         ALTER -> PWM_init(1,thrust + pitch);
         ALTER -> PWM_init(2,thrust + pitch); 

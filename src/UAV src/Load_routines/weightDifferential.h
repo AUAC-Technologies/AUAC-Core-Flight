@@ -4,8 +4,12 @@
 #include<stddef.h>
 #include<stdint.h>
 #include<Arduino.h>
+#include"../Sensors/IMU/InertialM.h"
 
 class WEIGHT_DIFF{
+    private:
+        double *COMPILE_STATE();
+
     public:
         boolean STILL_WEIGHT_DIFFERENTIAL_DETECT();
 
