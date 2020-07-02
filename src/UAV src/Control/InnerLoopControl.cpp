@@ -7,7 +7,8 @@ double ADJUST_ROLL(double set, double current){
     control -> createPIDinstance("innerLoopRoll",kp,ki,kd);
     double newR = control -> PID_MAIN("innerLoopRoll",set,current);
     mix -> MOTOR_MIX_ROLL(newR);
-    delete control,mix;
+    delete control;
+    delete mix;
     return;
 }
 
@@ -18,7 +19,8 @@ double ADJUST_PITCH(double set, double current){
     control -> createPIDinstance("innerLoopPitch",kp,ki,kd);
     double newP = control -> PID_MAIN("innerLoopPitch",set,current);
     mix -> MOTOR_MIX_ROLL(newP);
-    delete control,mix;
+    delete control;
+    delete mix;
     return;
 }
         
@@ -29,6 +31,7 @@ double ADJUST_YAW(double set, double current){
     control -> createPIDinstance("innerLoopYaw",kp,ki,kd);
     double newY = control -> PID_MAIN("innerLoopYaw",set,current);
     mix -> MOTOR_MIX_ROLL(newY);
-    delete control,mix;
+    delete control;
+    delete mix;
     return;
 }

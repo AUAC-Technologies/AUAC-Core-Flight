@@ -31,7 +31,7 @@ class PropThrustControl {
         uint8_t PWM_init(uint8_t M1_VEL,uint8_t M2_VEL);
 
         //Translates 0 - 9 motor PWM values to 0,175 - 255
-        uint8_t translate(uint8_t x);
+        double translate(double x);
 
 
 };
