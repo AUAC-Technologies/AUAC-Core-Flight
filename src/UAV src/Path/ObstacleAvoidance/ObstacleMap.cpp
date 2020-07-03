@@ -18,7 +18,7 @@ double *OBSTACLE_MAP::GET_DOF(){
     return dof;
 }
 
-double AVT_STATISTICAL_FILTERING(double *set){
+double OBSTACLE_MAP::AVT_STATISTICAL_FILTERING(double *set){
     //AVT algorithm
     uint8_t size = sizeof(set)/sizeof(set[0]);
     //Calculate the standard deviation and average value
@@ -37,10 +37,12 @@ double AVT_STATISTICAL_FILTERING(double *set){
         }
     }
     //Calculate average value of remaining data and present result as actual value representing data sample
-    return AVERAGE_FILTER(dropData);
+    double finAvg = AVERAGE_FILTER(dropData);
+    free(dropData);
+    return finAvg;
 }
 
-double STANDARD_DEVIATION(double *array){
+double OBSTACLE_MAP::STANDARD_DEVIATION(double *array){
     uint8_t size = sizeof(array)/sizeof(array[0]);
     //Work out the AVG
     double mean = AVERAGE_FILTER(array);
@@ -56,7 +58,7 @@ double STANDARD_DEVIATION(double *array){
     return sqrt(finalMean);
 }
 
-double AVERAGE_FILTER(double *array){
+double OBSTACLE_MAP::AVERAGE_FILTER(double *array){
     //Average Function
     double avg,sum;
     uint8_t size = sizeof(array)/sizeof(array[0]);

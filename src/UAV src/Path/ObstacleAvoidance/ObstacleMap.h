@@ -13,7 +13,7 @@ class OBSTACLE_MAP {
 
         double *GET_DOF();
 
-        double *AVT_STATISTICAL_FILTERING(double *set);
+        double AVT_STATISTICAL_FILTERING(double *set);
 
         double STANDARD_DEVIATION(double *array);
 
