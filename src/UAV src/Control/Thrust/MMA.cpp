@@ -57,3 +57,10 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_PITCH(double pitch){
     delete ALTER;
     return;
 }
+
+uint8_t MOTOR_MIXING::MOTOR_MIX_THRUST(double thrustLevel){
+    PropThrustControl *ALTER = new PropThrustControl;
+    double thrust;
+    
+
+}

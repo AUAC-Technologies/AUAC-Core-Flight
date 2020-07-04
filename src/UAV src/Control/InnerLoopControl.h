@@ -16,6 +16,8 @@ class InnerLoopControl {
         
         double ADJUST_YAW(double set,double current);
 
+        
+
 };
 
 #endif

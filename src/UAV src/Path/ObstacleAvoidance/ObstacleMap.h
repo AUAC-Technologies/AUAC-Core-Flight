@@ -21,7 +21,9 @@ class OBSTACLE_MAP {
 
         double *DETERMINE_LATLONG_FROM_DIST(double initiallatitude, double initiallongitude,double bearing, double metres);
 
-        double TRIANGULATE_MEASURED_VALUE_ALTITUDE();
+        double TRIANGULATE_MEASURED_VALUE_ALTITUDE(double bearing,double reading);
+
+        double TRIANGULATE_MEASURED_VALUE_WORLD_BEARING(double bearing,double reading);
 
     public:
         uint8_t UPDATE_OBS_MAP(double bearing,double reading);
