@@ -9,7 +9,7 @@ PropThrustControl::PropThrustControl(){
     pinMode(BPIN4,OUTPUT);
 }
 			
-uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,uint8_t M_VEL) {
+uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,double M_VEL) {
  	switch(MOTOR){
 		case 1:
 			thrustWriteFL(M_VEL);
@@ -28,22 +28,22 @@ uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,uint8_t M_VEL) {
 }	 
 
 
-uint8_t PropThrustControl::thrustWriteFL(uint8_t PWM){
+uint8_t PropThrustControl::thrustWriteFL(double PWM){
 	analogWrite(BPIN1,PWM);		//CLOCKWISE
 	return;
 }
 
-uint8_t PropThrustControl::thrustWriteFR(uint8_t PWM){
+uint8_t PropThrustControl::thrustWriteFR(double PWM){
 	analogWrite(BPIN2,PWM);    //ANTI-CLOCKWISE
 	return;
 }
 
-uint8_t PropThrustControl::thrustWriteBL(uint8_t PWM){
+uint8_t PropThrustControl::thrustWriteBL(double PWM){
 	analogWrite(BPIN3,PWM);    //ANTICLOCKWISE
 	return;
 }
 
-uint8_t PropThrustControl::thrustWriteBR(uint8_t PWM){
+uint8_t PropThrustControl::thrustWriteBR(double PWM){
 	analogWrite(BPIN4,PWM);    //CLOCKWISE
 	return;
 }

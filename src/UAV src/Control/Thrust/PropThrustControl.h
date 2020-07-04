@@ -16,13 +16,13 @@
 
 class PropThrustControl {
     private:
-        uint8_t thrustWriteFL(uint8_t PWM);
+        uint8_t thrustWriteFL(double PWM);
 
-        uint8_t thrustWriteFR(uint8_t PWM);
+        uint8_t thrustWriteFR(double PWM);
 
-        uint8_t thrustWriteBL(uint8_t PWM);
+        uint8_t thrustWriteBL(double PWM);
 
-        uint8_t thrustWriteBR(uint8_t PWM);
+        uint8_t thrustWriteBR(double PWM);
 
         uint8_t updateThrustValues(uint8_t MOTOR, double tLevel);
 
@@ -30,7 +30,7 @@ class PropThrustControl {
     public:
         PropThrustControl();
 
-        uint8_t PWM_init(uint8_t MOTOR,uint8_t M2_VEL);
+        uint8_t PWM_init(uint8_t MOTOR,double M2_VEL);
 
         //Translates 0 - 9 motor PWM values to 0,175 - 255
         double translate(double x);
