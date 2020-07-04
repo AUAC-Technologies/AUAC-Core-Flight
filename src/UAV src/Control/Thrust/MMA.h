@@ -11,7 +11,7 @@ class MOTOR_MIXING {
     private:
         uint8_t THRUST_RANGE_FIX();
 
-        double *getCurrentThrustLevel();
+        double getCurrentThrustLevel(uint8_t MOTOR);
         
     public:
         uint8_t MOTOR_MIX_ROLL(double roll);

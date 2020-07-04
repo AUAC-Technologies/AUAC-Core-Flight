@@ -24,6 +24,8 @@ class PropThrustControl {
 
         uint8_t thrustWriteBR(uint8_t PWM);
 
+        uint8_t updateThrustValues(uint8_t MOTOR, double tLevel);
+
 
     public:
         PropThrustControl();
@@ -33,5 +35,6 @@ class PropThrustControl {
         //Translates 0 - 9 motor PWM values to 0,175 - 255
         double translate(double x);
 
+        double *returnCurrentThrustValues();
 
 };
