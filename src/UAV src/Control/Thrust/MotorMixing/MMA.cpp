@@ -65,8 +65,11 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_PITCH(double pitch){
 
 uint8_t MOTOR_MIXING::MOTOR_MIX_THRUST(double thrustLevel){
     PropThrustControl *ALTER = new PropThrustControl;
-    double thrust;
-    
+    //double *thrust = ALTER -> returnCurrentThrustValues();
+    ALTER->PWM_init(1,getCurrentThrustLevel(1) + (thrustLevel));
+    ALTER->PWM_init(2,getCurrentThrustLevel(2) + (thrustLevel));
+    ALTER->PWM_init(3,getCurrentThrustLevel(3) + (thrustLevel));
+    ALTER->PWM_init(4,getCurrentThrustLevel(4) + (thrustLevel));
     delete ALTER;
     return;
 }

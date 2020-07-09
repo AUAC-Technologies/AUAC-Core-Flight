@@ -30,21 +30,25 @@ uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,double M_VEL) {
 
 uint8_t PropThrustControl::thrustWriteFL(double PWM){
 	analogWrite(BPIN1,PWM);		//CLOCKWISE
+	updateThrustValues(1,PWM);
 	return;
 }
 
 uint8_t PropThrustControl::thrustWriteFR(double PWM){
 	analogWrite(BPIN2,PWM);    //ANTI-CLOCKWISE
+	updateThrustValues(2,PWM);
 	return;
 }
 
 uint8_t PropThrustControl::thrustWriteBL(double PWM){
 	analogWrite(BPIN3,PWM);    //ANTICLOCKWISE
+	updateThrustValues(3,PWM);
 	return;
 }
 
 uint8_t PropThrustControl::thrustWriteBR(double PWM){
 	analogWrite(BPIN4,PWM);    //CLOCKWISE
+	updateThrustValues(4,PWM);
 	return;
 }
 

@@ -1,7 +1,7 @@
 #ifndef ILC
 #define ILC
 
-#include"Thrust/MMA.h"
+#include"Thrust/MotorMixing/MMA.h"
 #include"PID/PID.h"
 #include<stdint.h>
 #include<stddef.h>

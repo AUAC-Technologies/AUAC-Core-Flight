@@ -14,6 +14,11 @@ class EVENT_QUEUE {
 
         uint8_t SENSORS_INTERFACE();
 
+        uint8_t BEGIN_HOVER();
+
+        uint8_t INIT_GUIDANCE_NAV();
+
+        uint8_t INIT_BLUETOOTH();
         
         
 

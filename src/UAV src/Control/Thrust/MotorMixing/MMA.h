@@ -3,7 +3,7 @@
 
 #include<stdint.h>
 #include<stddef.h>
-#include"PropThrustControl.h"
+#include"../Driver/PropThrustControl.h"
 
 //Class for motor mixing algorithm
 

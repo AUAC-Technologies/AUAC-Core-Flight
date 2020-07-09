@@ -8,7 +8,7 @@ class UAV_TAKEOFF {
         uint8_t EXTRA_MASS_APPLIED();
 
     public:
-        
+        uint8_t INIT_TAKEOFF();
 
 
 };

@@ -4,7 +4,7 @@
 #include<stddef.h>
 #include<stdint.h>
 #include<math.h>
-#include"../Control/Thrust/MMA.h"
+#include"../Control/Thrust/MotorMixing/MMA.h"
 
 class BEARING {
     private:
