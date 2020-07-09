@@ -86,7 +86,7 @@ double *OBSTACLE_MAP::DETERMINE_LATLONG_FROM_DIST(double initiallatitude, double
 }
 
 double OBSTACLE_MAP::TRIANGULATE_MEASURED_VALUE_ALTITUDE(double bearing,double reading){
-
+    
 }
 
 double OBSTACLE_MAP::TRIANGULATE_MEASURED_VALUE_WORLD_BEARING(double bearing,double reading){

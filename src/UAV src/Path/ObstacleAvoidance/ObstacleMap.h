@@ -6,6 +6,7 @@
 #include<math.h>
 #include"../../Sensors/GPS/gps.h"
 #include"../../Sensors/IMU/InertialM.h"
+#include"ObstacleMap.h"
 
 class OBSTACLE_MAP {
     private:
