@@ -1,0 +1,9 @@
+UAV v1
+
+- ATMEGA 2560 on ADB
+- HC-SRO5 bluetooth module
+- NEO-6M GPS module
+- Micro- SD Card Module
+- Battery (Energy Shield 2 Rechargable)
+- MPU6050 IMU
+- Ultrasonics
