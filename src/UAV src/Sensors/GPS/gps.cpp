@@ -1,5 +1,6 @@
 #include"gps.h"
 
+TinyGPSPlus gps;
  // The serial connection to the GPS device
 SoftwareSerial ss(RX_PIN, TX_PIN);
 

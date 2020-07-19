@@ -3,16 +3,14 @@
 
 #include<stdint.h>
 #include<stddef.h>
+#include"Takeoff.h"
 //#includ
 
 class EVENT_QUEUE {
     private:
-
-
+        
     public:
         uint8_t UAV_SETUP();
-
-        uint8_t SENSORS_INTERFACE();
 
         uint8_t BEGIN_HOVER();
 

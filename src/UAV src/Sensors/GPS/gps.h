@@ -9,7 +9,6 @@
 
 class GPS {
     private:
-        TinyGPSPlus gps;
         static const uint32_t GPSBaud = 9600;
     
     public:
