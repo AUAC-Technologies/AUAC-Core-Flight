@@ -13,7 +13,7 @@
 #define HC05_KEY_PIN    13 //hc-05 key digital pin
 #define HC05_EN_PIN     14 //hc-05 enable digital pin
 
-#include<../../cores/arduino/Arduino.h>
+#include<Arduino.h>
 
 class AUTO_CONNECT {
     private:
