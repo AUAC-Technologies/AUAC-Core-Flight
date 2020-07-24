@@ -7,7 +7,7 @@ This UAV system is designed to be a dynamic personal storage system which can ac
 
 Across all releases there would be iterative UAV body design to allow for higher load capacity.
 
-![alt text](https://github.com/nyameaama/Autonomous-UAV/blob/master/CAD%20models/Body%20Prototype/Screen%20Shot%202020-06-28%20at%206.02.01%20PM%2010.28.38%20AM.png)
+![alt text](https://github.com/nyameaama/Autonomous-UAV/blob/platformio-master/CAD%20models/Body%20Prototype/Screen%20Shot%202020-06-28%20at%206.02.01%20PM%2010.28.38%20AM.png)
 
 Initial body design. See docs for design updates
 
