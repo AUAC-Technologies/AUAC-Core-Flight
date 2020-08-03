@@ -17,8 +17,8 @@
 */
 
 #include "USBAPI.h"
-#include <avr/wdt.h>
-#include <util/atomic.h>
+#include "../avr-libc-master/avr-libc/include/avr/avr/wdt.h"
+#include "../avr-libc-master/avr-libc/include/avr/avr/util/atomic.h"
 
 #if defined(USBCON)
 

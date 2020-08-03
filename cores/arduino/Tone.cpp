@@ -34,8 +34,8 @@ Version Modified By Date     Comments
 0010    jipp        15/04/13 added additional define check #2923
 *************************************************/
 
-#include <avr/interrupt.h>
-#include <avr/pgmspace.h>
+#include "../avr-libc-master/avr-libc/include/avr/avr/interrupt.h"
+#include "../avr-libc-master/avr-libc/include/avr/avr/pgmspace.h"
 #include "Arduino.h"
 #include "pins_arduino.h"
 

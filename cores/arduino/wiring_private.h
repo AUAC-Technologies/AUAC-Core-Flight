@@ -23,8 +23,8 @@
 #ifndef WiringPrivate_h
 #define WiringPrivate_h
 
-#include <avr/io.h>
-#include <avr/interrupt.h>
+#include "../avr-libc-master/avr-libc/include/avr/avr/io.h"
+#include "../avr-libc-master/avr-libc/include/avr/avr/interrupt.h"
 #include <stdio.h>
 #include <stdarg.h>
 
