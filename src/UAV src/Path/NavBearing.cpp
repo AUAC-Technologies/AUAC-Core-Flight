@@ -53,3 +53,7 @@ double BEARING::DISTANCE_BETWEEN(double current_lat,double current_long,double f
 		return (dist);
 	}
 }
+
+ double *BEARING::RETURN_ANCHOR_POSITION(){
+	 
+ }

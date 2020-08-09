@@ -29,6 +29,7 @@ SOFTWARE.
 #include<math.h>
 #include"../utility/utiltiyFunctions.h"
 #include"../Control/Thrust/MotorMixing/MMA.h"
+#include"../Control/Feedback Controllers/PositionController/PositionController.h"
 
 class BEARING {
     private:
@@ -37,6 +38,10 @@ class BEARING {
         double COMPUTE_BEARING(double current_lat,double current_long,double final_lat,double final_long);
 
         double DISTANCE_BETWEEN(double current_lat,double current_long,double final_lat,double final_long);
+
+    public:
+        //Function returns the remote position to the flight feedback controller
+        double *RETURN_ANCHOR_POSITION();
 
 };
 
