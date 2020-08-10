@@ -1,7 +1,7 @@
 # Autonomous Unmanned Aerial Companion (AUAC)
  
 ### Project Goal:
-The AUAC system is designed to be a dynamic personal storage system which can accompany an individual wherever they go. The goal of this project is to design a UAV which can aid and assist in the transportation of personal items such as phones,keys and minimal tier items. This project is aimed to be a proof of concept which is not meant to progress past the design stage. [Detailed_Description](https://github.com/nyameaama/Autonomous-UAV/blob/master/docs/description.md)
+The AUAC system is designed to be a dynamic personal storage system which can accompany an individual wherever they go. The goal of this project is to design a UAV which can aid and assist in the transportation of personal items such as phones,keys and minimal tier items. This project is aimed to be a proof of concept which is not meant to progress past the design stage. [Detailed Description](https://github.com/nyameaama/Autonomous-UAV/blob/master/docs/description.md)
 
 ### Project Hardware RoadMap:
 
