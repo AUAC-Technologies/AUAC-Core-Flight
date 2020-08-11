@@ -23,19 +23,19 @@ SOFTWARE.
 
 #include"BMP085.h"
 
-double Pressure::getTemperature(){
+AUAC_BASE_DOUBLE Pressure::getTemperature(){
     return Psensor -> readTemperature();
 }
 
-double Pressure::getSLPressure(){
+AUAC_BASE_DOUBLE Pressure::getSLPressure(){
     return Psensor -> readSealevelPressure();
 }
 
-double Pressure::getPressure(){
+AUAC_BASE_DOUBLE Pressure::getPressure(){
     return Psensor -> readPressure();
 }
 
-double Pressure::getAltitude(){
+AUAC_BASE_DOUBLE Pressure::getAltitude(){
     double temp1, temp2, height;
 	//Calculating Altitude from pressure using hypsometric formula
 	temp1 = (pow((getPressure() / getSLPressure()), (1 / 5.257)) - 1);

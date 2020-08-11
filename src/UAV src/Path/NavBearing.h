@@ -28,20 +28,21 @@ SOFTWARE.
 #include<stdint.h>
 #include<math.h>
 #include"../utility/utiltiyFunctions.h"
+#include"../utility/definitions.h"
 #include"../Control/Thrust/MotorMixing/MMA.h"
 #include"../Control/Feedback Controllers/PositionController/PositionController.h"
 
 class BEARING {
     private:
-        uint8_t GET_REMOTE_COORDINATE();
+        AUAC_UBASE_8 GET_REMOTE_COORDINATE();
 
-        double COMPUTE_BEARING(double current_lat,double current_long,double final_lat,double final_long);
+        AUAC_BASE_DOUBLE COMPUTE_BEARING(double current_lat,double current_long,double final_lat,double final_long);
 
-        double DISTANCE_BETWEEN(double current_lat,double current_long,double final_lat,double final_long);
+        AUAC_BASE_DOUBLE DISTANCE_BETWEEN(double current_lat,double current_long,double final_lat,double final_long);
 
     public:
         //Function returns the remote position to the flight feedback controller
-        double *RETURN_ANCHOR_POSITION();
+        AUAC_BASE_DOUBLE *RETURN_ANCHOR_POSITION();
 
 };
 

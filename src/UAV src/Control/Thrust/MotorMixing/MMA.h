@@ -27,23 +27,24 @@ SOFTWARE.
 #include<stdint.h>
 #include<stddef.h>
 #include"../Driver/PropThrustControl.h"
+#include"../../../utility/definitions.h"
 
 //Class for motor mixing algorithm
 
 class MOTOR_MIXING {
     private:
-        uint8_t THRUST_RANGE_FIX();
+        AUAC_UBASE_8 THRUST_RANGE_FIX();
 
-        double getCurrentThrustLevel(uint8_t MOTOR);
+        AUAC_BASE_DOUBLE getCurrentThrustLevel(uint8_t MOTOR);
         
     public:
-        uint8_t MOTOR_MIX_ROLL(double roll);
+        AUAC_UBASE_8 MOTOR_MIX_ROLL(double roll);
 
-        uint8_t MOTOR_MIX_YAW(double yaw);
+        AUAC_UBASE_8 MOTOR_MIX_YAW(double yaw);
 
-        uint8_t MOTOR_MIX_PITCH(double pitch);
+        AUAC_UBASE_8 MOTOR_MIX_PITCH(double pitch);
 
-        uint8_t MOTOR_MIX_THRUST(double thrustLevel);
+        AUAC_UBASE_8 MOTOR_MIX_THRUST(double thrustLevel);
 
 };
 

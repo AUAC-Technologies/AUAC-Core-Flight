@@ -31,7 +31,7 @@ GPS::GPS(){
     ss.begin(GPSBaud);
 }
 
-double GPS::getLatitude(){
+AUAC_BASE_DOUBLE GPS::getLatitude(){
     double lat = -1;
     while(ss.available() > 0){
         gps.encode(ss.read());
@@ -42,7 +42,7 @@ double GPS::getLatitude(){
     return lat;   
 }
 
-double GPS::getLongitude(){
+AUAC_BASE_DOUBLE GPS::getLongitude(){
     double Llong = -1;
     while(ss.available() > 0){
         gps.encode(ss.read());
@@ -53,7 +53,7 @@ double GPS::getLongitude(){
     return Llong;
 }
 
-double GPS::getapproxAltitude(){
+AUAC_BASE_DOUBLE GPS::getapproxAltitude(){
     double approxA = -1;
     while(ss.available() > 0){
         gps.encode(ss.read());
@@ -62,7 +62,7 @@ double GPS::getapproxAltitude(){
     return approxA; 
 }
 
-double *GPS::getTime(){
+AUAC_BASE_DOUBLE *GPS::getTime(){
     double *time = (double*)malloc(3);
     while(ss.available() > 0){
         gps.encode(ss.read());

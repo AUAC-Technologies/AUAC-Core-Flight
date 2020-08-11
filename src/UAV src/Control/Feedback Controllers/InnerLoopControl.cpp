@@ -23,7 +23,7 @@ SOFTWARE.
 
 #include"InnerLoopControl.h"
 
-double ADJUST_ROLL(double set, double current){
+AUAC_BASE_DOUBLE ADJUST_ROLL(double set, double current){
     PROPORTIONAL_INTEGRAL_DERIVATIVE *control = new PROPORTIONAL_INTEGRAL_DERIVATIVE;
     MOTOR_MIXING *mix = new MOTOR_MIXING;
     double kp,kd,ki;  //<- Tune PID gains
@@ -35,7 +35,7 @@ double ADJUST_ROLL(double set, double current){
     return;
 }
 
-double ADJUST_PITCH(double set, double current){
+AUAC_BASE_DOUBLE ADJUST_PITCH(double set, double current){
     PROPORTIONAL_INTEGRAL_DERIVATIVE *control = new PROPORTIONAL_INTEGRAL_DERIVATIVE;
     MOTOR_MIXING *mix = new MOTOR_MIXING;
     double kp,kd,ki;  //<- Tune PID gains
@@ -47,7 +47,7 @@ double ADJUST_PITCH(double set, double current){
     return;
 }
         
-double ADJUST_YAW(double set, double current){
+AUAC_BASE_DOUBLE ADJUST_YAW(double set, double current){
     PROPORTIONAL_INTEGRAL_DERIVATIVE *control = new PROPORTIONAL_INTEGRAL_DERIVATIVE;
     MOTOR_MIXING *mix = new MOTOR_MIXING;
     double kp,kd,ki; //<- Tune PID gains

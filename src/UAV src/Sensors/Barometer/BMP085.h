@@ -24,7 +24,8 @@ SOFTWARE.
 #ifndef BMP085
 #define BMP085
 
-#include<Adafruit_BMP085.h>
+#include"../../lib/Adafruit-BMP085-Library-master/Adafruit_BMP085.h"
+#include"../../utility/definitions.h"
 
 class Pressure {
     private:
@@ -32,13 +33,13 @@ class Pressure {
         Adafruit_BMP085 *Psensor = &Obj;
         
     public:
-        double getTemperature();
+        AUAC_BASE_DOUBLE getTemperature();
 
-        double getSLPressure();
+        AUAC_BASE_DOUBLE getSLPressure();
 
-        double getPressure();
+        AUAC_BASE_DOUBLE getPressure();
 
-        double getAltitude();
+        AUAC_BASE_DOUBLE getAltitude();
 
 };
 

@@ -32,7 +32,7 @@ PropThrustControl::PropThrustControl(){
     pinMode(BPIN4,OUTPUT);
 }
 			
-uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,double M_VEL) {
+AUAC_UBASE_8 PropThrustControl::PWM_init(uint8_t MOTOR,double M_VEL) {
  	switch(MOTOR){
 		case 1:
 			thrustWriteFL(M_VEL);
@@ -51,35 +51,35 @@ uint8_t PropThrustControl::PWM_init(uint8_t MOTOR,double M_VEL) {
 }	 
 
 
-uint8_t PropThrustControl::thrustWriteFL(double PWM){
+AUAC_UBASE_8 PropThrustControl::thrustWriteFL(double PWM){
 	analogWrite(BPIN1,PWM);		//CLOCKWISE
 	updateThrustValues(1,PWM);
 	return;
 }
 
-uint8_t PropThrustControl::thrustWriteFR(double PWM){
+AUAC_UBASE_8 PropThrustControl::thrustWriteFR(double PWM){
 	analogWrite(BPIN2,PWM);    //ANTI-CLOCKWISE
 	updateThrustValues(2,PWM);
 	return;
 }
 
-uint8_t PropThrustControl::thrustWriteBL(double PWM){
+AUAC_UBASE_8 PropThrustControl::thrustWriteBL(double PWM){
 	analogWrite(BPIN3,PWM);    //ANTICLOCKWISE
 	updateThrustValues(3,PWM);
 	return;
 }
 
-uint8_t PropThrustControl::thrustWriteBR(double PWM){
+AUAC_UBASE_8 PropThrustControl::thrustWriteBR(double PWM){
 	analogWrite(BPIN4,PWM);    //CLOCKWISE
 	updateThrustValues(4,PWM);
 	return;
 }
 
-uint8_t PropThrustControl::updateThrustValues(uint8_t MOTOR, double tLevel){
+AUAC_UBASE_8 PropThrustControl::updateThrustValues(uint8_t MOTOR, double tLevel){
 	currentMotorValues[MOTOR - 1] = tLevel;
 	return;
 }
 
-double *PropThrustControl::returnCurrentThrustValues(){
+AUAC_BASE_DOUBLE *PropThrustControl::returnCurrentThrustValues(){
 	return currentMotorValues;
 }

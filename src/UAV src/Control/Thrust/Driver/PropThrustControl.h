@@ -24,6 +24,7 @@ SOFTWARE.
 #include<stdint.h>
 #include<stddef.h>
 #include<Arduino.h>
+#include"../../../utility/definitions.h"
 
 #define HIGH 1
 #define LOW 0
@@ -39,25 +40,25 @@ SOFTWARE.
 
 class PropThrustControl {
     private:
-        uint8_t thrustWriteFL(double PWM);
+        AUAC_UBASE_8 thrustWriteFL(double PWM);
 
-        uint8_t thrustWriteFR(double PWM);
+        AUAC_UBASE_8 thrustWriteFR(double PWM);
 
-        uint8_t thrustWriteBL(double PWM);
+        AUAC_UBASE_8 thrustWriteBL(double PWM);
 
-        uint8_t thrustWriteBR(double PWM);
+        AUAC_UBASE_8 thrustWriteBR(double PWM);
 
-        uint8_t updateThrustValues(uint8_t MOTOR, double tLevel);
+        AUAC_UBASE_8 updateThrustValues(uint8_t MOTOR, double tLevel);
 
 
     public:
         PropThrustControl();
 
-        uint8_t PWM_init(uint8_t MOTOR,double M2_VEL);
+        AUAC_UBASE_8 PWM_init(uint8_t MOTOR,double M2_VEL);
 
         //Translates 0 - 9 motor PWM values to 0,175 - 255
-        double translate(double x);
+        AUAC_BASE_DOUBLE translate(double x);
 
-        double *returnCurrentThrustValues();
+        AUAC_BASE_DOUBLE *returnCurrentThrustValues();
 
 };
