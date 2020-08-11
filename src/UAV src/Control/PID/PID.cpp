@@ -34,22 +34,22 @@ double error_previous = 0,error_integral = 0;
 double error,processVar;
 double derivative,proportional,integral;
 
-double PROPORTIONAL_INTEGRAL_DERIVATIVE::getProportional(){
+AUAC_BASE_DOUBLE PROPORTIONAL_INTEGRAL_DERIVATIVE::getProportional(){
     proportional = kp * error;
     return proportional;
 }
 
-double PROPORTIONAL_INTEGRAL_DERIVATIVE::getIntegral(){
+AUAC_BASE_DOUBLE PROPORTIONAL_INTEGRAL_DERIVATIVE::getIntegral(){
     integral = ki * error_integral;
     return integral;
 }
 
-double PROPORTIONAL_INTEGRAL_DERIVATIVE::getDerivative(){
+AUAC_BASE_DOUBLE PROPORTIONAL_INTEGRAL_DERIVATIVE::getDerivative(){
     derivative = kd * derivative;
     return derivative;
 }
 
-double PROPORTIONAL_INTEGRAL_DERIVATIVE::PID_MAIN(String Process,double current,double setpoint){
+AUAC_BASE_DOUBLE PROPORTIONAL_INTEGRAL_DERIVATIVE::PID_MAIN(String Process,double current,double setpoint){
     updateConstants(Process);
     processVar = current;
 	error = setpoint - processVar;

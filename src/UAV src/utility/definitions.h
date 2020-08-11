@@ -21,5 +21,47 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#ifndef DEFINITIONS_
+#define DEFINITIONS_
+
+#include<stdint.h>
+#include<stddef.h>
+
+//Void type
 typedef void NO_RETURN;
 
+
+//Unsigned
+
+//Unsigned 8 bit integer
+typedef uint8_t AUAC_UBASE_8;
+//Unsigned 16 bit integer
+typedef uint16_t AUAC_UBASE_16;
+//Unsigned 32 bit integer
+typedef uint32_t AUAC_UBASE_32;
+//Unsigned 64 bit integer
+typedef uint64_t AUAC_UBASE_64;
+
+
+
+//Signed
+
+//8 bit integer
+typedef int8_t AUAC_BASE_8;
+//16 bit integer
+typedef int16_t AUAC_BASE_16;
+//32 bit integer
+typedef int32_t AUAC_BASE_32;
+//64 bit integer
+typedef int64_t AUAC_BASE_64;
+
+
+
+//floating point
+
+typedef double AUAC_BASE_DOUBLE;
+typedef float AUAC_BASE_FLOAT;
+
+
+
+#endif  

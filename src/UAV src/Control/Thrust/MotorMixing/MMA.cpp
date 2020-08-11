@@ -23,11 +23,11 @@ SOFTWARE.
 
 #include"MMA.h"
 
-uint8_t MOTOR_MIXING::THRUST_RANGE_FIX(){
+AUAC_UBASE_8 MOTOR_MIXING::THRUST_RANGE_FIX(){
 
 }
 
-double MOTOR_MIXING::getCurrentThrustLevel(uint8_t MOTOR){
+AUAC_BASE_DOUBLE MOTOR_MIXING::getCurrentThrustLevel(uint8_t MOTOR){
     PropThrustControl *RETRIEVE = new PropThrustControl;
     double *level = RETRIEVE -> returnCurrentThrustValues();
     double thrust = level[MOTOR - 1];
@@ -35,7 +35,7 @@ double MOTOR_MIXING::getCurrentThrustLevel(uint8_t MOTOR){
     return thrust;
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_ROLL(double roll){
+AUAC_UBASE_8 MOTOR_MIXING::MOTOR_MIX_ROLL(double roll){
     PropThrustControl *ADJUST = new PropThrustControl;
     if(roll < 0){
         ADJUST -> PWM_init(1,getCurrentThrustLevel(1) + roll);
@@ -52,7 +52,7 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_ROLL(double roll){
     return;
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_YAW(double yaw){
+AUAC_UBASE_8 MOTOR_MIXING::MOTOR_MIX_YAW(double yaw){
     PropThrustControl *MOD = new PropThrustControl;
     if(yaw < 0){
         MOD -> PWM_init(1,getCurrentThrustLevel(1) - yaw);
@@ -69,7 +69,7 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_YAW(double yaw){
     return;
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_PITCH(double pitch){
+AUAC_UBASE_8 MOTOR_MIXING::MOTOR_MIX_PITCH(double pitch){
     PropThrustControl *ALTER = new PropThrustControl;
     if(pitch < 0){
         ALTER -> PWM_init(1,getCurrentThrustLevel(1) + pitch);
@@ -86,7 +86,7 @@ uint8_t MOTOR_MIXING::MOTOR_MIX_PITCH(double pitch){
     return;
 }
 
-uint8_t MOTOR_MIXING::MOTOR_MIX_THRUST(double thrustLevel){
+AUAC_UBASE_8 MOTOR_MIXING::MOTOR_MIX_THRUST(double thrustLevel){
     PropThrustControl *ALTER = new PropThrustControl;
     //double *thrust = ALTER -> returnCurrentThrustValues();
     ALTER->PWM_init(1,getCurrentThrustLevel(1) + (thrustLevel));

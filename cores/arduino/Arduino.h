@@ -25,9 +25,9 @@
 #include <string.h>
 #include <math.h>
 
-#include "../avr-libc-master/avr-libc/include/avr/avr/pgmspace.h"
-#include "../avr-libc-master/avr-libc/include/avr/avr/io.h"
-#include "../avr-libc-master/avr-libc/include/avr/avr/interrupt.h"
+#include "../avr-libc-master/avr-libc/include/avr/pgmspace.h"
+#include "../avr-libc-master/avr-libc/include/avr/io.h"
+#include "../avr-libc-master/avr-libc/include/avr/interrupt.h"
 
 #include "binary.h"
 

@@ -23,11 +23,11 @@ SOFTWARE.
 
 #include"NavBearing.h"
 
-uint8_t BEARING::GET_REMOTE_COORDINATE(){
+AUAC_UBASE_8 BEARING::GET_REMOTE_COORDINATE(){
 
 }
 
-double BEARING::COMPUTE_BEARING(double current_lat,double current_long,double final_lat,double final_long){
+AUAC_BASE_DOUBLE BEARING::COMPUTE_BEARING(double current_lat,double current_long,double final_lat,double final_long){
 	UTILITY_FUNCTIONS *convert = new UTILITY_FUNCTIONS;
     double temp1,temp2,bearing;
 	temp1 = sin(final_long - current_long) * cos(final_lat);
@@ -37,7 +37,7 @@ double BEARING::COMPUTE_BEARING(double current_lat,double current_long,double fi
 	return bearing;
 }
 
-double BEARING::DISTANCE_BETWEEN(double current_lat,double current_long,double final_lat,double final_long){
+AUAC_BASE_DOUBLE BEARING::DISTANCE_BETWEEN(double current_lat,double current_long,double final_lat,double final_long){
 	UTILITY_FUNCTIONS *convert = new UTILITY_FUNCTIONS;
     double theta, dist;
 	if ((current_lat == final_lat) && (current_long == final_long)){
@@ -54,6 +54,6 @@ double BEARING::DISTANCE_BETWEEN(double current_lat,double current_long,double f
 	}
 }
 
- double *BEARING::RETURN_ANCHOR_POSITION(){
-	 
+ AUAC_BASE_DOUBLE *BEARING::RETURN_ANCHOR_POSITION(){
+
  }

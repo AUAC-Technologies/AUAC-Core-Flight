@@ -25,6 +25,7 @@ SOFTWARE.
 #define PID
 
 #include<Arduino.h>
+#include"../../utility/definitions.h"
 //#include"ErrorDump.h"
 
 //Different instances of PID computation will be called from this class so each unique process will
@@ -37,11 +38,11 @@ class PROPORTIONAL_INTEGRAL_DERIVATIVE {
     private:
         void updateConstants(String Process);
 
-        double getProportional();
+        AUAC_BASE_DOUBLE getProportional();
 
-        double getIntegral();
+        AUAC_BASE_DOUBLE getIntegral();
 
-        double getDerivative();
+        AUAC_BASE_DOUBLE getDerivative();
 
         boolean compare(String x, String y);
 
@@ -49,7 +50,7 @@ class PROPORTIONAL_INTEGRAL_DERIVATIVE {
 
     public:
         //
-        double PID_MAIN(String Process,double rocketPos,double setpoint);
+        AUAC_BASE_DOUBLE PID_MAIN(String Process,double rocketPos,double setpoint);
 
         void createPIDinstance(String tag,double kp,double ki,double kd);
 

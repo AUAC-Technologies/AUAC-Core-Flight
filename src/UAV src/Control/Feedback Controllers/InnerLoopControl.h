@@ -26,6 +26,7 @@ SOFTWARE.
 
 #include"../Thrust/MotorMixing/MMA.h"
 #include"../PID/PID.h"
+#include"../../utility/definitions.h"
 #include<stdint.h>
 #include<stddef.h>
 
@@ -33,11 +34,11 @@ SOFTWARE.
 
 class InnerLoopControl {
     public:
-        double ADJUST_ROLL(double set,double current);
+        AUAC_BASE_DOUBLE ADJUST_ROLL(double set,double current);
 
-        double ADJUST_PITCH(double set,double current);
+        AUAC_BASE_DOUBLE ADJUST_PITCH(double set,double current);
         
-        double ADJUST_YAW(double set,double current);
+        AUAC_BASE_DOUBLE ADJUST_YAW(double set,double current);
 
         
 

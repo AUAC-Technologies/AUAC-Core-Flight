@@ -36,20 +36,23 @@ SOFTWARE.
 #define BACKWARDS_TRIG (uint8_t)0
 #define BACKWARDS_ECHO (uint8_t)0
 
-#include<Arduino.h>
+#include"../../../cores/arduino/Arduino.h"
+//#include<Arduino.h>
+#include"../../../utility/definitions.h"
+
 
 class Ultrasonics {
     private:
-        double interface(uint8_t trig,uint8_t echo);
+        AUAC_BASE_DOUBLE interface(uint8_t trig,uint8_t echo);
 
     public:
-        double getForwardFacing();
+        AUAC_BASE_DOUBLE getForwardFacing();
 
-        double getSideLeft();
+        AUAC_BASE_DOUBLE getSideLeft();
 
-        double getSideRight();
+        AUAC_BASE_DOUBLE getSideRight();
 
-        double getBackwardsFacing();
+        AUAC_BASE_DOUBLE getBackwardsFacing();
 
 };
 

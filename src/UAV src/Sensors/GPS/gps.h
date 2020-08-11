@@ -25,6 +25,7 @@ SOFTWARE.
 
 #include<TinyGPS++.h>
 #include<SoftwareSerial.h>
+#include"../../utility/definitions.h"
 
 #define RX_PIN 0
 #define TX_PIN 0
@@ -38,18 +39,18 @@ class GPS {
         GPS();
 
         //Function to get latitude from GPS
-        double getLatitude();
+        AUAC_BASE_DOUBLE getLatitude();
 
         //Function to get longitude from GPS
-        double getLongitude();
+        AUAC_BASE_DOUBLE getLongitude();
 
         //Function to get approxiamate altitude from GPS
         //Returns meters
-        double getapproxAltitude();
+        AUAC_BASE_DOUBLE getapproxAltitude();
 
         //Function to return array of current time from GPS
         //{Hour,Min,Sec}
-        double *getTime();
+        AUAC_BASE_DOUBLE *getTime();
 
 };
 
