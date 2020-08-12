@@ -1,0 +1,18 @@
+﻿BILL OF COMPONENTS - AUAC,,,,,
+,,,,,
+Component,Description,Quantitiy,Component Dest,Price,Buy Source
+BMP180,BMP180 - Pressure Sensor Evaluation Board,2,UAV + Remote,$9.95 ,https://www.digikey.com/products/en?mpart=1603&v=1528
+MPU-6050,"Accelerometer, Gyroscope, 6 Axis Sensor I²C Output",1,UAV,$8.31 ,https://www.digikey.com/product-detail/en/tdk-invensense/MPU-6050/1428-1007-1-ND/4038010
+HCSR04,Ultrasonic Distance Sensor - HC-SR04,4,UAV,$3.95 ,https://www.sparkfun.com/products/15569
+HC-05 , Bluetooth Module,1,Remote,x,x
+HC-06, Bluetooth Module,1,UAV,x,x
+ATMEGA 2560 - MEGA,Development Board,1,UAV,$35.00,https://store.arduino.cc/arduino-mega-2560…
+ATMEGA 328P - UNO,Development Board,1,Remote,$20.00 ,https://store.arduino.cc/arduino-uno-rev3
+OV7670,CMOS Camera Module ,1,UAV,$25.00 ,https://www.amazon.com/0-3-Megapixel-Interface-Resolution-640X480-Support/dp/B07HSXJBM7
+Mega Sensor Shield,"Sensor Shield for Arduino Mega 2560, with SD-card logger (Assembled)",1,UAV,$5.99 ,https://robotdyn.com/catalog/sensor-shield-for-arduino-mega-2560-with-sd-card-logger.html
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,Total Price =,,$108.20 ,
