@@ -21,26 +21,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#ifndef UTIL
-#define UTIL
+#ifndef JSON
+#define JSON
 
-#include"definitions.h"
-#include<stddef.h>
-#include<string.h>
-#include"../cores/arduino/Arduino.h"
+#include"../../lib/ArduinoJson-6.x/ArduinoJson.h"
 
-#define pi (3.14159265358979)
-
-class UTILITY_FUNCTIONS {
+class PACKAGE_JSON {
     public:
-        //This function converts decimal degrees to radians       
-		AUAC_BASE_DOUBLE deg2rad(double deg);
 
-        //This function converts radians to decimal degrees 
-		AUAC_BASE_DOUBLE rad2deg(double rad);
-        
-        //This function generates a 5 digit Alphanumeric random string
-        AUAC_BASE_STRING generateAlphanumericString();
+
+
+
 };
 
 #endif

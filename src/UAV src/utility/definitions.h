@@ -59,8 +59,19 @@ typedef int64_t AUAC_BASE_64;
 
 //floating point
 
+//double
 typedef double AUAC_BASE_DOUBLE;
+//float
 typedef float AUAC_BASE_FLOAT;
+
+
+
+//Char
+
+//char*
+typedef char* AUAC_BASE_STRING;
+
+
 
 
 

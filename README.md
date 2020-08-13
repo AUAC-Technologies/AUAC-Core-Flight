@@ -20,7 +20,7 @@ Initial body design. See docs for design updates
 
 #### Release 2.0
 * Increased UAV load capacity
-* Custom PCBs for controllers
+* Custom PCBs for controllers 
 
 ### Project Firmware RoadMap:
 

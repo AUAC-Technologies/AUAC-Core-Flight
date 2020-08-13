@@ -32,5 +32,22 @@ AUAC_BASE_DOUBLE UTILITY_FUNCTIONS::rad2deg(double rad){
 	return (rad * 180 / pi);
 }
 
+//This function generates a 5 digit Alphanumeric random string
+AUAC_BASE_STRING UTILITY_FUNCTIONS::generateAlphanumericString(){
+	AUAC_BASE_STRING alphabet = "abcdefghijklmnopqrstuvwxyz";
+	AUAC_BASE_8 randAnchor = random(0,1);
+	AUAC_BASE_8 randNumber = random(0,27);
+	AUAC_BASE_STRING final_string;
+	for(size_t i = 0; i < 10;i++){
+		if(random(0,1) == 0){
+			//Add String
+			//AUAC_BASE_STRING append = alphabet[randNumber];
+			//strcat(final_string,);
+		}else{
+			//Add int
 
+		}
+	}
+
+}
         
