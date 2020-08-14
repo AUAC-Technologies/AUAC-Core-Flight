@@ -23,3 +23,32 @@ SOFTWARE.
 
 #include"PACKAGE_JSON.h"
 
+//Function serializes JSON object and returns JSON doc in array
+AUAC_BASE_STRING PACKAGE_JSON::serializeToJson(JSON_OBJECT object){
+    //Return array
+    AUAC_BASE_STRING serialized;
+    //Serialize to JSON
+    serializeJson(object,serialized,200);
+    return serialized;
+}
+
+template<typename DEFINED>
+DEFINED PACKAGE_JSON::deserializeJson(AUAC_BASE_STRING jsonDoc){
+    //Create object
+    StaticJsonDocument<200> temp;
+    //Deserialize the JSON document
+    DeserializationError error = deserializeJson(temp, json);
+    //Test if parsing succeeds.
+    if(error){
+        //Handle error
+    }
+    
+}
+
+//Function adds data to JSON object 
+template<typename DEFINED>
+DEFINED PACKAGE_JSON::addToJsonObject(JSON_OBJECT object,AUAC_BASE_STRING dataCategory, DEFINED data){
+    //Add data to JSON object
+    x[dataCategory] = data;
+    return data;
+}

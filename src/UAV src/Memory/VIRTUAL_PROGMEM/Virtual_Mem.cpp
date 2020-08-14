@@ -23,3 +23,15 @@ SOFTWARE.
 
 #include"Virtual_Mem.h"
 
+NO_RETURN VIRTUAL_MEMORY::createVariableContainer(AUAC_BASE_STRING variableName){
+
+}
+
+NO_RETURN VIRTUAL_MEMORY::deleteVariableContainer(AUAC_BASE_STRING variableName){
+
+}
+
+template<typename RT>
+RT VIRTUAL_MEMORY::addToVariableContainer(AUAC_BASE_STRING container, RT data){
+
+}

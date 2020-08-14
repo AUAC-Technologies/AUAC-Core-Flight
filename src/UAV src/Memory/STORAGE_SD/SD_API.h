@@ -44,9 +44,7 @@ class SD_API {
     public:
         AUAC_BASE_32 addDataToFile(AUAC_BASE_STRING fileCode);
 
-        
-
-
+        AUAC_BASE_STRING *readFileintoBuffer(AUAC_BASE_STRING fileCode);
 
 
 

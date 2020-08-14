@@ -25,12 +25,22 @@ SOFTWARE.
 #define JSON
 
 #include"../../lib/ArduinoJson-6.x/ArduinoJson.h"
+#include"../../utility/definitions.h"
+
+#define JSON_OBJECT StaticJsonDocument<200> 
+
 
 class PACKAGE_JSON {
     public:
+        //Function serializes JSON object and returns JSON doc in array
+        AUAC_BASE_STRING serializeToJson(JSON_OBJECT object);
 
+        template<typename DEFINED>
+        DEFINED deserializeJson(AUAC_BASE_STRING jsonDoc);
 
-
+        //Function adds data to JSON object
+        template<typename DEFINED>
+        DEFINED addToJsonObject(JSON_OBJECT object,AUAC_BASE_STRING dataCategory, DEFINED data);
 
 };
 

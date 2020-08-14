@@ -34,7 +34,7 @@ class VIRTUAL_MEMORY {
         NO_RETURN deleteVariableContainer(AUAC_BASE_STRING variableName);
 
         template<typename RT>
-        RT addToVariableContainer(RT data);
+        RT addToVariableContainer(AUAC_BASE_STRING container, RT data);
 
 
 };
