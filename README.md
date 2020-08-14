@@ -3,6 +3,9 @@
 ### Project Goal:
 The AUAC system is designed to be a dynamic personal storage system which can accompany an individual wherever they go. The goal of this project is to design a UAV which can aid and assist in the transportation of personal items such as phones,keys and minimal tier items. This project is aimed to be a proof of concept which is not meant to progress past the design stage. [Detailed Description](https://github.com/nyameaama/Autonomous-UAV/blob/master/docs/description.md)
 
+## Control 
+The AUAC drone runs a closed-loop feedback system. The control system looks at the current output and alters it to the desired condition with the control action in the system based on the output of the drone. The feedback system consists of 4 PID controllers for control of pitch, yaw and roll. For more information on tuning. [Link]()
+
 ### Project Hardware RoadMap:
 
 Across all releases there would be iterative UAV body design to allow for higher load capacity.
