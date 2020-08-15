@@ -1,7 +1,7 @@
 # Autonomous Unmanned Aerial Companion (AUAC)
 
 <p align = "center">
-<img src = "https://github.com/AUAC-Technologies/Snyder-Drone/tree/master/AUAC_assets/original" width = "195" height = "195"/>
+<img src = "https://github.com/AUAC-Technologies/Snyder-Drone/blob/master/AUAC_assets/original/AUAC_LOGO.jpg" width = "195" height = "195"/>
 </p>
 
 ### AUAC
