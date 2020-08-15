@@ -35,6 +35,7 @@ class PACKAGE_JSON {
         //Function serializes JSON object and returns JSON doc in array
         AUAC_BASE_STRING serializeToJson(JSON_OBJECT object);
 
+        //Function desirializes json doc array 
         template<typename DEFINED>
         DEFINED deserializeJson(AUAC_BASE_STRING jsonDoc);
 

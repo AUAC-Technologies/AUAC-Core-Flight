@@ -32,6 +32,7 @@ AUAC_BASE_STRING PACKAGE_JSON::serializeToJson(JSON_OBJECT object){
     return serialized;
 }
 
+//Function desirializes json doc array 
 template<typename DEFINED>
 DEFINED PACKAGE_JSON::deserializeJson(AUAC_BASE_STRING jsonDoc){
     //Create object
@@ -42,7 +43,7 @@ DEFINED PACKAGE_JSON::deserializeJson(AUAC_BASE_STRING jsonDoc){
     if(error){
         //Handle error
     }
-    
+
 }
 
 //Function adds data to JSON object 
