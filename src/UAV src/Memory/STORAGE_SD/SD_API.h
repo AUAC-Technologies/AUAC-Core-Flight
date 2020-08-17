@@ -26,25 +26,32 @@ SOFTWARE.
 
 */
 
-#ifndef SD
-#define SD
+#ifndef SD_
+#define SD_
 
 #include"../../cores/core-libs/SPI/src/SPI.h"
 #include"../../lib/SD-master/SD.h"
 #include"../../utility/definitions.h"
+#include"../../utility/utiltiyFunctions.h"
 
 class SD_API {
     private:
-        NO_RETURN createFile();
+        //Function to add file to available file registry
+        NO_RETURN registerFile(AUAC_BASE_STRING filename);
 
-        NO_RETURN deleteFile();
+        //Function to create a file
+        AUAC_BASE_STRING createFile();
+
+        //Function to delete a file
+        NO_RETURN deleteFile(AUAC_BASE_STRING file);
 
         AUAC_BASE_STRING getFileDir();
         
     public:
-        AUAC_BASE_32 addDataToFile(AUAC_BASE_STRING fileCode);
+        //Function to add data to specified File
+        AUAC_BASE_32 addDataToFile(AUAC_BASE_STRING file);
 
-        AUAC_BASE_STRING *readFileintoBuffer(AUAC_BASE_STRING fileCode);
+        AUAC_BASE_STRING readFileintoBuffer(AUAC_BASE_STRING file);
 
 
 

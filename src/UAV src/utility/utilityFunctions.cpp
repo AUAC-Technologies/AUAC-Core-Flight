@@ -24,30 +24,28 @@ SOFTWARE.
 #include"utiltiyFunctions.h"
 
 //This function converts decimal degrees to radians
-AUAC_BASE_DOUBLE UTILITY_FUNCTIONS::deg2rad(double deg){
+AUAC_BASE_DOUBLE UTILITY_FUNCTIONS::deg2rad(AUAC_BASE_DOUBLE deg){
 	return (deg * pi / 180);
 }
 //This function converts radians to decimal degrees
-AUAC_BASE_DOUBLE UTILITY_FUNCTIONS::rad2deg(double rad){
+AUAC_BASE_DOUBLE UTILITY_FUNCTIONS::rad2deg(AUAC_BASE_DOUBLE rad){
 	return (rad * 180 / pi);
 }
 
 //This function generates a 5 digit Alphanumeric random string
 AUAC_BASE_STRING UTILITY_FUNCTIONS::generateAlphanumericString(){
-	AUAC_BASE_STRING alphabet = "abcdefghijklmnopqrstuvwxyz";
-	AUAC_BASE_8 randAnchor = random(0,1);
-	AUAC_BASE_8 randNumber = random(0,27);
-	AUAC_BASE_STRING final_string;
-	for(size_t i = 0; i < 10;i++){
-		if(random(0,1) == 0){
-			//Add String
-			//AUAC_BASE_STRING append = alphabet[randNumber];
-			//strcat(final_string,);
-		}else{
-			//Add int
-
-		}
-	}
-
+	srand(time(NULL));
+	const int MAX = 26;
+	AUAC_BASE_8 n = 9; 
+    char alphabet[MAX] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 
+                          'h', 'i', 'j', 'k', 'l', 'm', 'n',  
+                          'o', 'p', 'q', 'r', 's', 't', 'u', 
+                          'v', 'w', 'x', 'y', 'z' }; 
+  
+    AUAC_BASE_STRING res = ""; 
+    for (int i = 0; i < n; i++)  
+        res = res + alphabet[rand() % MAX]; 
+      
+    return res; 
 }
         

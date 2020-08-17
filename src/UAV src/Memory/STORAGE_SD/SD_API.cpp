@@ -23,3 +23,55 @@ SOFTWARE.
 
 #include"SD_API.h"
 
+AUAC_BASE_STRING *fileRegistry = (AUAC_BASE_STRING *)malloc(20);
+AUAC_UBASE_8 index; 
+
+//Function to add file to available file registry
+NO_RETURN SD_API::registerFile(AUAC_BASE_STRING filename){
+    fileRegistry[index] = filename;
+    index++;
+}
+
+//Function to create a file
+AUAC_BASE_STRING SD_API::createFile(){
+    //Generate fileName
+    //Utility object for alphanumeric generator function
+    UTILITY_FUNCTIONS *util = new UTILITY_FUNCTIONS();
+    //Alphanumeric text
+    AUAC_BASE_STRING fName = util -> generateAlphanumericString();
+    //Create File 
+    File tempCreate;
+    tempCreate = SD.open(fName,FILE_WRITE);
+    tempCreate.close();
+    //Register File Name
+    registerFile(fName);
+    //Free 
+    delete util;
+    return fName;
+}
+
+//Function to delete a file
+NO_RETURN SD_API::deleteFile(AUAC_BASE_STRING file){
+    SD.remove(file);
+}
+
+AUAC_BASE_STRING SD_API::getFileDir(){
+
+}
+
+//Function to add data to specified File
+AUAC_BASE_32 SD_API::addDataToFile(AUAC_BASE_STRING file){
+
+}
+
+AUAC_BASE_STRING SD_API::readFileintoBuffer(AUAC_BASE_STRING file){
+    File temp;
+    //temp.open(file);
+    AUAC_BASE_STRING buffer;
+    if(temp){
+        while(temp.available()){
+            //buffer = temp.read();
+        }
+    }
+    return buffer;
+}       

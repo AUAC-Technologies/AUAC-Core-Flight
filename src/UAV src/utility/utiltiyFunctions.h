@@ -27,6 +27,8 @@ SOFTWARE.
 #include"definitions.h"
 #include<stddef.h>
 #include<string.h>
+#include<stdlib.h>
+#include<time.h>
 #include"../cores/arduino/Arduino.h"
 
 #define pi (3.14159265358979)
@@ -34,10 +36,10 @@ SOFTWARE.
 class UTILITY_FUNCTIONS {
     public:
         //This function converts decimal degrees to radians       
-		AUAC_BASE_DOUBLE deg2rad(double deg);
+		AUAC_BASE_DOUBLE deg2rad(AUAC_BASE_DOUBLE deg);
 
         //This function converts radians to decimal degrees 
-		AUAC_BASE_DOUBLE rad2deg(double rad);
+		AUAC_BASE_DOUBLE rad2deg(AUAC_BASE_DOUBLE rad);
         
         //This function generates a 5 digit Alphanumeric random string
         AUAC_BASE_STRING generateAlphanumericString();

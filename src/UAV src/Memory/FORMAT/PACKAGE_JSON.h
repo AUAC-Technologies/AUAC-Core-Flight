@@ -37,7 +37,7 @@ class PACKAGE_JSON {
 
         //Function desirializes json doc array 
         template<typename DEFINED>
-        DEFINED deserializeJson(AUAC_BASE_STRING jsonDoc);
+        DEFINED deserialize(AUAC_BASE_STRING jsonDoc);
 
         //Function adds data to JSON object
         template<typename DEFINED>

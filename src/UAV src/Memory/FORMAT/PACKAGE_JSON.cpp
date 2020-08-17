@@ -34,11 +34,11 @@ AUAC_BASE_STRING PACKAGE_JSON::serializeToJson(JSON_OBJECT object){
 
 //Function desirializes json doc array 
 template<typename DEFINED>
-DEFINED PACKAGE_JSON::deserializeJson(AUAC_BASE_STRING jsonDoc){
+DEFINED PACKAGE_JSON::deserialize(AUAC_BASE_STRING jsonDoc){
     //Create object
     StaticJsonDocument<200> temp;
     //Deserialize the JSON document
-    DeserializationError error = deserializeJson(temp, json);
+    DeserializationError error = deserializeJson(temp, jsonDoc);
     //Test if parsing succeeds.
     if(error){
         //Handle error
@@ -50,6 +50,6 @@ DEFINED PACKAGE_JSON::deserializeJson(AUAC_BASE_STRING jsonDoc){
 template<typename DEFINED>
 DEFINED PACKAGE_JSON::addToJsonObject(JSON_OBJECT object,AUAC_BASE_STRING dataCategory, DEFINED data){
     //Add data to JSON object
-    x[dataCategory] = data;
+    object[dataCategory] = data;
     return data;
 }
