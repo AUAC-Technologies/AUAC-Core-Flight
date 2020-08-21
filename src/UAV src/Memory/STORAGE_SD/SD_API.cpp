@@ -59,9 +59,24 @@ AUAC_BASE_STRING SD_API::getFileDir(){
 
 }
 
-//Function to add data to specified File
-AUAC_BASE_32 SD_API::addDataToFile(AUAC_BASE_STRING file){
+AUAC_BASE_BOOL checkForFile(AUAC_BASE_STRING filename){
+    for(size_t i = 0; i < index;i++){
+        if(strcmp(fileRegistry[i],filename) != 0){
+            return true;
+        }
+    }
+    return false;
+}
 
+//Function to add data to specified File
+template<typename FileType>
+AUAC_BASE_32 SD_API::addDataToFile(FileType data, AUAC_BASE_STRING file){
+    if(!checkForFile(file)){return 0;}
+    File temp;
+    temp = SD.open(file,FILE_WRITE);
+    temp.print(data);
+    temp.close();
+    return data;
 }
 
 AUAC_BASE_STRING SD_API::readFileintoBuffer(AUAC_BASE_STRING file){

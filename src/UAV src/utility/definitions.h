@@ -73,6 +73,11 @@ typedef char* AUAC_BASE_STRING;
 
 
 
+//
+typedef bool AUAC_BASE_BOOL;
+
+
+
 
 
 #endif  

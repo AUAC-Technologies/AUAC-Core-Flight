@@ -46,10 +46,13 @@ class SD_API {
         NO_RETURN deleteFile(AUAC_BASE_STRING file);
 
         AUAC_BASE_STRING getFileDir();
+
+        AUAC_BASE_BOOL checkForFile(AUAC_BASE_STRING filename);
         
     public:
         //Function to add data to specified File
-        AUAC_BASE_32 addDataToFile(AUAC_BASE_STRING file);
+        template<typename FileType>
+        AUAC_BASE_32 addDataToFile(FileType data,AUAC_BASE_STRING file);
 
         AUAC_BASE_STRING readFileintoBuffer(AUAC_BASE_STRING file);
 

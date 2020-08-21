@@ -29,10 +29,13 @@ SOFTWARE.
 
 class VIRTUAL_MEMORY {
     public:
+        //Create container for variable
         NO_RETURN createVariableContainer(AUAC_BASE_STRING variableName);
-
+        
+        //Delete variable container
         NO_RETURN deleteVariableContainer(AUAC_BASE_STRING variableName);
 
+        //Add value to variable container
         template<typename RT>
         RT addToVariableContainer(AUAC_BASE_STRING container, RT data);
 
