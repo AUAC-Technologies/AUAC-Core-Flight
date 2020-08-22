@@ -25,7 +25,10 @@ SOFTWARE.
 #define VIRTUAL
 
 #include"../../utility/definitions.h"
+#include"../FORMAT/PACKAGE_JSON.h"
 #include"../STORAGE_SD/SD_API.h"
+
+#define JSON_OBJECT StaticJsonDocument<200>
 
 class VIRTUAL_MEMORY {
     public:

@@ -24,6 +24,9 @@ SOFTWARE.
 #include"Virtual_Mem.h"
 
 NO_RETURN VIRTUAL_MEMORY::createVariableContainer(AUAC_BASE_STRING variableName){
+    PACKAGE_JSON *jsonObject = new PACKAGE_JSON();
+    SD_API *sdObject = new SD_API();
+    //jsonObject -> addToJsonObject(StaticJsonDocument<200>file,variableName,0);
 
 }
 
