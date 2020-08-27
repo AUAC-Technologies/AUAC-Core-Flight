@@ -35,7 +35,7 @@ extern "C" {
 #endif
 
 #include "atomtimer.h"
-#include "atomport.h"
+#include "../ports/avr/atomport.h"
 
 /* Data types */
 

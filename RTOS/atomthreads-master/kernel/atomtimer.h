@@ -34,7 +34,8 @@
 extern "C" {
 #endif
 
-#include "atomport.h"
+#include"../ports/avr/atomport.h"
+
 
 
 /* Callback function prototype */
